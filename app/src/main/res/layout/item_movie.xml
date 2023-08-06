@@ -9,11 +9,14 @@
     android:layout_marginRight="8dp"
     android:clickable="true"
     android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+
 
 
     >
 
     <ImageView
+        android:transitionName="sharedName"
         android:scaleType="centerCrop"
         android:id="@+id/item_movie_img"
         android:layout_width="0dp"

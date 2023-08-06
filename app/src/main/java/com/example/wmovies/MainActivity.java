@@ -6,7 +6,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -16,7 +20,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MovieItemClickListener {
 
 
     private List<Slide> lstSlides ;
@@ -64,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         lstMovies.add(new Movie("The Martian",R.drawable.themartian));
         lstMovies.add(new Movie("The Martian",R.drawable.themartian));
 
-        MovieAdapter movieAdapter = new MovieAdapter(MainActivity.this,lstMovies);
+        MovieAdapter movieAdapter = new MovieAdapter(this,lstMovies,this);
         MoviesRV.setAdapter(movieAdapter);
         MoviesRV.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
@@ -72,6 +76,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onMovieClick(Movie movie, ImageView movieImageView) {
+
+        Intent intent = new Intent(this,MovieDetailActivity.class);
+        // send movie information to deatilActivity
+        intent.putExtra("title",movie.getTitle());
+        intent.putExtra("imgURL",movie.getThumbnail());
+        intent.putExtra("imgCover",movie.getCoverPhoto());
+        // lets crezte the animation
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
+                movieImageView,"sharedName");
+
+
+        startActivity(intent,options.toBundle());
+
+        Toast.makeText(this,"item clicked : " + movie.getTitle(),Toast.LENGTH_LONG).show();
+
+
+    }
 
 
     class SliderTimer extends TimerTask {
