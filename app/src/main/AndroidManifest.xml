@@ -21,10 +21,18 @@
         </activity>
         <activity
             android:name=".ui.loginpage"
-            android:exported="false" >
+            android:exported="true" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+
         </activity>
         <activity
             android:name=".ui.contact"
@@ -49,12 +57,7 @@
         </activity>
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false" >
 
             <meta-data
                 android:name="android.app.lib_name"

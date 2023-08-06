@@ -18,6 +18,11 @@
         android:title="About Us"/>
 
     <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Logout"/>
+
+    <item
         android:id="@+id/action_exit"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Exit"/>

@@ -27,6 +27,7 @@ import com.example.wmovies.adapters.SliderPagerAdapter;
 import com.example.wmovies.utils.DataSource;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,6 +91,12 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
             case R.id.action_about:
                 Intent abouttIntent = new Intent(this,about.class);
                 startActivity(abouttIntent);
+                return true;
+
+            case R.id.action_logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainActivity.this, loginpage.class));
+                finish(); // Close the current activity if needed
                 return true;
 
             case R.id.action_exit:
