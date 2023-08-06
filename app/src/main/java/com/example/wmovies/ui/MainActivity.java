@@ -1,9 +1,8 @@
-package com.example.wmovies;
+package com.example.wmovies.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.ActivityOptions;
@@ -12,6 +11,12 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.wmovies.models.Movie;
+import com.example.wmovies.adapters.MovieAdapter;
+import com.example.wmovies.adapters.MovieItemClickListener;
+import com.example.wmovies.R;
+import com.example.wmovies.models.Slide;
+import com.example.wmovies.adapters.SliderPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 

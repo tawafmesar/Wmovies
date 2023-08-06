@@ -1,4 +1,4 @@
-package com.example.wmovies;
+package com.example.wmovies.models;
 
 
 public class Movie {

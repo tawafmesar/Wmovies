@@ -1,4 +1,4 @@
-package com.example.wmovies;
+package com.example.wmovies.adapters;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.wmovies.R;
+import com.example.wmovies.models.Slide;
 
 import java.util.List;
 
