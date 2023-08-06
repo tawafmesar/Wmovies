@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "189889343775",
+    "project_id": "wmovies-933a3",
+    "storage_bucket": "wmovies-933a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189889343775:android:4561909ce5fd425951802a",
+        "android_client_info": {
+          "package_name": "com.example.wmovies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189889343775-4377qifjfq12i1m68k95ej788pvv8157.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO-D1v2zu71rKRq7ciDRxgCfVQ8XStVHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189889343775-4377qifjfq12i1m68k95ej788pvv8157.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
