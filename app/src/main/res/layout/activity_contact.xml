@@ -4,9 +4,202 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background=""
+    android:background="@drawable/background2"
     tools:context=".ui.contact">
 
 
+
+    <TextView
+        android:id="@+id/detailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Get in touch"
+        android:textColor="#B3D7FF"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="106dp" />
+
+
+    <TableLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0D498A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="10dp"
+        android:layout_marginTop="10dp"
+        android:stretchColumns="1"
+        >
+        <LinearLayout>
+            <TableRow
+                android:id="@+id/row_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#4592E5"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Want to get in touch? We’d love to hear from
+you. Here’s how you can rech us..."
+                    android:textColor="#fff" />
+
+            </TableRow>
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/row_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="#F1F1F1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Twitter"
+                android:textColor="#1E88E5"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#F1F1F1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="WMOvies"
+                android:textColor="#1E88E5"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="#D1CECE"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Facebook"
+                android:textColor="#0277BD"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#D1CECE"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="WMOvies"
+                android:textColor="#0277BD"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/row_32"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="#F1F1F1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Email"
+                android:textColor="#1E88E5"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#F1F1F1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="WMOvies@gmail.com"
+                android:textColor="#1E88E5"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/row_12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="#D1CECE"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Telephone"
+                android:textColor="#0277BD"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#D1CECE"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="011 6333131"
+                android:textColor="#0277BD"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+
+
+
+
+
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

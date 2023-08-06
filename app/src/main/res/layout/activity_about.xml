@@ -4,14 +4,278 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ui.about">
 
 
-    <TextView
+
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/simple_text"
-        >
+        android:fillViewport="true">
 
-    </TextView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <TableLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0D498A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="10dp"
+                android:layout_marginTop="10dp"
+                android:stretchColumns="1"
+                >
+                <LinearLayout>
+
+
+                    <TableRow
+                        android:id="@+id/row_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#4592E5"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:text="About us \n\n We're a small, tight-knit team focused on making application WMOvies to help
+you to discover what to watch and let you create your own movie list. Some of
+us are developers, others are great managers of the project, and Debugger
+and Tester. We've worked hard to build WMovies where we do big things.\n\n\n
+We'rehere to help you do the same."
+                            android:textColor="#fff" />
+
+                    </TableRow>
+                </LinearLayout>
+
+                <TableRow
+                    android:id="@+id/row_4id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:background="#4592E5"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="25dp"
+                        android:text="Taif Mohammed Alruqi"
+                        android:textColor="#FAFAFA"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:background="#F1F1F1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="IT Student"
+                        android:textColor="#1E88E5"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+
+
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp">
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:background="#D1CECE"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Interest of : \n  Project Managers \n Database Creation "
+                        android:textColor="#0277BD"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:id="@+id/row_44id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:background="#4592E5"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="25dp"
+                        android:text="Wed abdulkreem alsulami"
+                        android:textColor="#FAFAFA"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_44"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:background="#F1F1F1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="IT Student"
+                        android:textColor="#1E88E5"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+
+
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_77"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:background="#D1CECE"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Interest of : \n  App developer \n Structure designs "
+                        android:textColor="#0277BD"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:id="@+id/row_4wid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:background="#4592E5"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textSize="25dp"
+                        android:text="Rola Saud Almutair"
+                        android:textColor="#FAFAFA"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_444"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:background="#F1F1F1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="IT Student"
+                        android:textColor="#1E88E5"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+
+
+
+
+                </TableRow>
+
+
+                <TableRow
+                    android:id="@+id/row_777"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:background="#D1CECE"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Interest of : \n  Debugger \n  Tester "
+                        android:textColor="#0277BD"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+
+
+
+            </TableLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
