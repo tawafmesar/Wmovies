@@ -1,13 +1,20 @@
 package com.example.wmovies.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.ActivityOptions;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -40,6 +47,13 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        LayoutInflater inflater =(LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.custom_image,null);
+        getSupportActionBar().setCustomView(view);
+
 
         iniViews();
         iniSlider();
@@ -48,6 +62,44 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
 
 
 
+    }
+
+    @Override
+    public boolean onCreatePanelMenu(int featureId, @NonNull Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return  true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.action_home:
+                Intent homeIntent = new Intent(this,MainActivity.class);
+                startActivity(homeIntent);
+
+                return true;
+
+            case R.id.action_contact_us:
+                Intent contactIntent = new Intent(this,contact.class);
+                startActivity(contactIntent);
+                return true;
+
+            case R.id.action_about:
+                Intent abouttIntent = new Intent(this,about.class);
+                startActivity(abouttIntent);
+                return true;
+
+            case R.id.action_exit:
+                finish(); // Close the activity
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 
     private void iniViews() {
@@ -112,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
 
         startActivity(intent,options.toBundle());
 
-        Toast.makeText(this,"item clicked : " + movie.getTitle(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(this,"item clicked : " + movie.getTitle(),Toast.LENGTH_LONG).show();
 
 
     }
