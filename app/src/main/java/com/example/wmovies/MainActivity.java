@@ -1,6 +1,8 @@
 package com.example.wmovies;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Slide> lstSlides ;
     private ViewPager2 sliderpager;  // Use ViewPager2
     private TabLayout indicator;
+    private RecyclerView MoviesRV ;
 
 
     @Override
@@ -30,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
          sliderpager = findViewById(R.id.slider_pager);
          indicator = findViewById(R.id.indicator);
+         MoviesRV = findViewById(R.id.Rv_movies);
+
 
         lstSlides = new ArrayList<>() ;
         lstSlides.add(new Slide(R.drawable.slide1,"Slide Title \nmore text here"));
@@ -45,9 +50,23 @@ public class MainActivity extends AppCompatActivity {
         timer.scheduleAtFixedRate(new MainActivity.SliderTimer(),4000,6000);
 
         new TabLayoutMediator(indicator, sliderpager, (tab, position) -> {
-            // Set tab titles or icons here if needed
         }).attach();
 
+
+
+
+
+        List<Movie> lstMovies = new ArrayList<>();
+        lstMovies.add(new Movie("Moana",R.drawable.moana,R.drawable.spidercover));
+        lstMovies.add(new Movie("Black P",R.drawable.blackp,R.drawable.spidercover));
+        lstMovies.add(new Movie("The Martian",R.drawable.themartian));
+        lstMovies.add(new Movie("The Martian",R.drawable.themartian));
+        lstMovies.add(new Movie("The Martian",R.drawable.themartian));
+        lstMovies.add(new Movie("The Martian",R.drawable.themartian));
+
+        MovieAdapter movieAdapter = new MovieAdapter(MainActivity.this,lstMovies);
+        MoviesRV.setAdapter(movieAdapter);
+        MoviesRV.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
 
 
