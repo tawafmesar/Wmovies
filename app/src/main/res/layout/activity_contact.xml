@@ -147,17 +147,7 @@ you. Here’s how you can rech us..."
                 android:textSize="18dp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="10"
-                android:background="#F1F1F1"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="WMOvies@gmail.com"
-                android:textColor="#1E88E5"
-                android:textSize="17dp"
-                android:textStyle="bold" />
+
 
         </TableRow>
 
