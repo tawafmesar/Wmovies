@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
             case R.id.action_logout:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(MainActivity.this, loginpage.class));
-                finish(); // Close the current activity if needed
+                finish();
                 return true;
 
             case R.id.action_exit:
@@ -140,10 +140,10 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
 
     private void iniSlider() {
         lstSlides = new ArrayList<>() ;
-        lstSlides.add(new Slide(R.drawable.slide1,"Slide Title \nmore text here"));
-        lstSlides.add(new Slide(R.drawable.slide2,"Slide Title \nmore text here"));
-        lstSlides.add(new Slide(R.drawable.slide1,"Slide Title \nmore text here"));
-        lstSlides.add(new Slide(R.drawable.slide2,"Slide Title \nmore text here"));
+        lstSlides.add(new Slide(R.drawable.mart,"The Martian \nthe crew of the Ares"));
+        lstSlides.add(new Slide(R.drawable.slide2,"The fabelmans \nafter the storm"));
+        lstSlides.add(new Slide(R.drawable.onesheet2,"Moana \n Temuera Morrison"));
+        lstSlides.add(new Slide(R.drawable.john2,"John Whick \nOn a January night in 1952"));
 
 
         SliderPagerAdapter adapter = new SliderPagerAdapter(this, lstSlides);
@@ -164,6 +164,8 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
         intent.putExtra("title",movie.getTitle());
         intent.putExtra("imgURL",movie.getThumbnail());
         intent.putExtra("imgCover",movie.getCoverPhoto());
+        intent.putExtra("desc",movie.getDescription());
+
         // lets crezte the animation
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
                 movieImageView,"sharedName");

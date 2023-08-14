@@ -33,6 +33,16 @@ public class Movie {
     }
 
 
+    public Movie(String title, String description, int thumbnail, String studio, String rating, String streamingLink, int coverPhoto) {
+        this.title = title;
+        this.description = description;
+        this.thumbnail = thumbnail;
+        this.studio = studio;
+        this.rating = rating;
+        this.streamingLink = streamingLink;
+        this.coverPhoto = coverPhoto;
+    }
+
     public int getCoverPhoto() {
         return coverPhoto;
     }
